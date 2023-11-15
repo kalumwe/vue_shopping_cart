@@ -1,15 +1,22 @@
 {
   "name": "shopping_cart",
   "version": "0.1.0",
+  "description": "Shopping Cart",
   "private": true,
   "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "node server",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "client": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js"
   },
   "dependencies": {
+    "axios": "^0.17.1",
     "core-js": "^3.8.3",
-    "vue": "^2.6.14"
+    "vue": "^2.6.14",
+    "vuex": "^3.6.2",
+    "webpack-cli": "^5.1.4"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -17,8 +24,13 @@
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "concurrently": "^8.2.2",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
+    "webpack": "^3.6.0",
+    "webpack-bundle-analyzer": "^2.9.0",
+    "webpack-dev-server": "^2.9.1",
+    "webpack-merge": "^4.1.0",
     "vue-template-compiler": "^2.6.14"
   },
   "eslintConfig": {
