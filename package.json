@@ -4,12 +4,12 @@
   "description": "Shopping Cart",
   "private": true,
   "scripts": {
-    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "concurrently \"npm run server\" \"npm run serve\"  \"npm run client\"",
     "server": "node server",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "client": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js"
+    "client": "webpack-dev-server  --progress --config build/webpack.dev.conf.js"
   },
   "dependencies": {
     "axios": "^0.17.1",
