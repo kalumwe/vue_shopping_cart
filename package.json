@@ -4,7 +4,7 @@
   "description": "Shopping Cart",
   "private": true,
   "scripts": {
-    "start": "concurrently \"npm run server\" \"npm run serve\"  \"npm run client\"",
+    "start": "concurrently \"npm run server\" \"npm run serve\"",
     "server": "node server",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
