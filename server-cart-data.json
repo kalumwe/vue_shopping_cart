@@ -1,16 +1,16 @@
 [
     {
         "id": 1,
-        "title": "The Fullstack Hoodie",
-        "description": "Lightweight, breathable hoodie with the Fullstack Crest. Guaranteed to keep you looking fresh while warm.",
+        "title": "Hoodie",
+        "description": "Lightweight, breathable hoodie with the Vue Crest. Guaranteed to keep you looking fresh while warm.",
         "price": 19.99,
         "quantity": 2
     },
     {
         "id": 4,
-        "title": "The Fullstack Jacket",
-        "description": "Keep warm and protected with the rugged, durable Fullstack lightweight jacket.",
-        "price": 49.99,
+        "title": "Jacket",
+        "description": "Keep warm and protected with the rugged, durable Vue lightweight jacket.",
+        "price": 44.99,
         "quantity": 8
     }
 ]
