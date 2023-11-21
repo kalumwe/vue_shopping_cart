@@ -3,18 +3,24 @@
       <div class="cart--header has-text-centered">
         <i class="fa fa-2x fa-shopping-cart"></i>
       </div>
-      <ul>
+      <p v-if="!cartItems.length"
+        class="cart-empty-text has-text-centered">
+         Add some items to the cart!
+      </p>
+      <ul v-if="cartItems.length > 0">
         <li v-for="cartItem in cartItems" :key="cartItem.id" class="cart-item">
           <CartListItem :cartItem="cartItem" />
         </li>
         <div class="cart-details">
            <p>Total Quantity: <span class="has-text-weight-bold">{{ cartQuantity }}</span></p>
-           <p class="cart-remove-all--text">
+           <p @click = "removeAllCartItems"
+             class="cart-remove-all--text">
               <i class="fa fa-trash"></i>Remove all
            </p>
         </div>
       </ul>
-      <button class="button is-primary">
+      <button @click="checkoutCart"
+      :disabled="!cartItems.length" class="button is-primary">
        Checkout (<span class="has-text-weight-bold">${{ cartTotal }}</span>)
       </button>
     </div>
@@ -22,6 +28,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
+import { mapActions } from 'vuex';
 import CartListItem from './CartListItem';
 
 export default {
@@ -32,6 +39,12 @@ export default {
         'cartTotal',
         'cartQuantity'
       ])
+   },
+   methods: {
+    ...mapActions([
+      'removeAllCartItems',
+      'checkoutCart',
+    ])
    },
    created() {
     this.$store.dispatch('getCartItems');

@@ -1,7 +1,8 @@
     <template>   
        <div>
             <h2 class="has-text-weight-bold">{{ productItem.title }}
-              <span class="tag is-primary is-pulled-right has-text-white">
+              <span @click="addCartItem(productItem)"
+                     class="tag is-primary is-pulled-right has-text-white">
                Add to Cart
               </span>
             </h2>
@@ -13,9 +14,16 @@
     </template>
 
     <script>
+    import { mapActions } from 'vuex';
+
         export default {
            name: 'ProductListItem',
-           props: ['productItem']
+           props: ['productItem'],
+           methods: {
+               ...mapActions([
+                    'addCartItem'
+               ])
+           }
         }
     </script>
 

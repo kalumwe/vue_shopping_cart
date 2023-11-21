@@ -20,6 +20,7 @@ const actions = {
 
 const getters = {
     productItems: state => state.productItems,
+    getTotalProducts: state => state.productItems.length,
 };
 
 const productModule = {

@@ -22,5 +22,11 @@
         "title": "Jacket",
         "description": "Keep warm and protected with the rugged, durable Vue lightweight jacket.",
         "price": 44.99
+    },
+    {
+        "id": 5,
+        "title": "shoes",
+        "description": "clean cormfy and stylish with Vue logo.",
+        "price": 144.99
     }
 ]

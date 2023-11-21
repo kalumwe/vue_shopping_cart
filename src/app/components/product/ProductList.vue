@@ -12,7 +12,7 @@
         </div>
       </div>
       <div class="product-count has-text-right">
-        <span class="has-text-weight-bold"># of products: 4</span>
+        <span class="has-text-weight-bold"># of products: {{ getTotalProducts }}</span>
       </div>
     </div>
 </template>
@@ -26,7 +26,8 @@ export default {
   computed: {
     ...mapGetters([
        // map this.productItems to this.$store.getters.productItems
-       'productItems'
+       'productItems',
+       'getTotalProducts',
     ])
    },
   created() {
