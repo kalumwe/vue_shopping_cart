@@ -1,16 +1,9 @@
 [
     {
-        "id": 3,
-        "title": "Cap",
-        "description": "Stay comfortable and cool with the first Vue Fitted Cap, featuring a normal bill and medium crown.",
-        "price": 14.99,
-        "quantity": 1
-    },
-    {
-        "id": 5,
-        "title": "shoes",
-        "description": "clean cormfy and stylish with Vue logo.",
-        "price": 144.99,
+        "id": 1,
+        "title": "Pink Hoodie",
+        "description": "Lightweight, breathable hoodie with the Vue Crest. Guaranteed to keep you looking fresh while warm.",
+        "price": 19.99,
         "quantity": 1
     }
 ]

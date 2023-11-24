@@ -2,6 +2,7 @@
     <template>
       <div>
           <p class="cart-item--title is-inline">{{ cartItem.title }}</p>
+          <img :src="getImageUrl(cartItem.imageUrl)" alt="Product Image" class="product-image">
           <div class="is-pulled-right">
             <i @click="addCartItem(cartItem)"
               class="fa fa-arrow-circle-up cart-item--modify"></i>
@@ -30,7 +31,10 @@ import { mapActions } from 'vuex';
       ...mapActions([
         'addCartItem',
         'removeCartItem',
-      ])   
+      ]),
+      getImageUrl(imagePath) {
+        return `img/${imagePath}`; 
+      },  
     }
   };
 </script>
@@ -41,4 +45,8 @@ import { mapActions } from 'vuex';
   cursor: pointer;
   margin: 0 1px;
 }
+.product-image {
+    width: 84px; 
+    height: auto;
+ }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <div id="products" class="box">
+    <div id="products" class="">
       <div class="products--header has-text-centered">
         <i class="fa fa-2x fa-user-circle"></i>
       </div>
@@ -41,6 +41,9 @@ export default {
 </script>
 
 <style scoped>
+#products {
+  margin-top: 600px;
+}
 .products--header {
   border-bottom: 1px solid #E8E8E8;
   padding-bottom: 15px;

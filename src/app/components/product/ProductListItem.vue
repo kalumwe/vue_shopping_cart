@@ -1,5 +1,6 @@
     <template>   
        <div>
+        <img :src="getImageUrl(productItem.imageUrl)" alt="Product Image" class="product-image">
             <h2 class="has-text-weight-bold">{{ productItem.title }}
               <span @click="addCartItem(productItem)"
                      class="tag is-primary is-pulled-right has-text-white">
@@ -22,7 +23,10 @@
            methods: {
                ...mapActions([
                     'addCartItem'
-               ])
+               ]),
+               getImageUrl(imagePath) {
+                  return `/img/${imagePath}`; 
+               },
            }
         }
     </script>
@@ -31,5 +35,9 @@
     <style scoped>
        .tag {
            cursor: pointer;
+        }
+        .product-image {
+            width: 164px; 
+            height: auto;
         }
     </style>

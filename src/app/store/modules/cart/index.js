@@ -1,6 +1,5 @@
 import axios from 'axios';
 import * as types from './mutation-types';
-import * as checkout from './mutation-types';
 
 const state = {
    cartItems: [],
@@ -11,7 +10,7 @@ const mutations = {
    [types.UPDATE_CART_ITEMS] (state, payload) {
       state.cartItems = payload;
    },
-   [checkout.CHECKOUT_CART] (state) {
+   CHECKOUT_CART (state) {
       state.checkout = true;
    }
 };
@@ -38,8 +37,8 @@ const actions = {
       });
    },
    checkoutCart ({ commit }, cart) {
-      axios.post('/api/cart/checkout').then((response) => {
-         commit(checkout.CHECKOUT_CART);
+      axios.post('/api/cart/checkout', cart).then((response) => {
+         commit('CHECKOUT_CART', response.data);
       });
    }
 };
