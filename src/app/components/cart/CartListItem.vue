@@ -2,13 +2,14 @@
     <template>
       <div>
           <p class="cart-item--title is-inline">{{ cartItem.title }}</p>
-          <img :src="getImageUrl(cartItem.imageUrl)" alt="Product Image" class="product-image">
+          
           <div class="is-pulled-right">
             <i @click="addCartItem(cartItem)"
               class="fa fa-arrow-circle-up cart-item--modify"></i>
             <i @click="removeCartItem(cartItem)" 
               class="fa fa-arrow-circle-down cart-item--modify"></i>
-          </div>
+          </div><br>
+          <img :src="getImageUrl(cartItem.imageUrl)" alt="Product Image" class="product-image m-2">
           <div class="cart-item--content">
             <span class="cart-item--price has-text-primary has-text-weight-bold">
               {{cartItem.price }}$ each
@@ -46,7 +47,7 @@ import { mapActions } from 'vuex';
   margin: 0 1px;
 }
 .product-image {
-    width: 84px; 
+    width: 74px; 
     height: auto;
  }
 </style>
