@@ -5,9 +5,9 @@
           
           <div class="is-pulled-right">
             <i @click="addCartItem(cartItem)"
-              class="fa fa-arrow-circle-up cart-item--modify"></i>
+              class="fa fa-plus-circle cart-item--modify"></i>
             <i @click="removeCartItem(cartItem)" 
-              class="fa fa-arrow-circle-down cart-item--modify"></i>
+              class="fa fa-minus-circle cart-item--modify"></i>
           </div><br>
           <img :src="getImageUrl(cartItem.imageUrl)" alt="Product Image" class="product-image m-2">
           <div class="cart-item--content">
